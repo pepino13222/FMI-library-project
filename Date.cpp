@@ -39,3 +39,8 @@ void Date::copy(const Date &&other) {
 Date::Date(const Date &&other)  {
     copy(std::move(other));
 }
+
+ Date &Date::operator=(const Date&& other) {
+    copy(std::move(other));
+    return *this;
+}

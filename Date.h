@@ -17,7 +17,7 @@ class Date {
 
     void SetYear(const int&& other);
     void SetMonth(const int&& other);
-
+    Date& operator =(const Date&& other);
 private:
     int month;
     int year;

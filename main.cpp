@@ -3,7 +3,9 @@
 #include "Date.h"
 #include "ServerBookComponent.h"
 #include "ServerMagazineComponent.h"
-int main() {
-    
+#include "ServerBaseUserComponent.h"
+int main()
+{
+
     return 0;
 }
