@@ -1,19 +1,10 @@
 # ninja log v5
-1	187	6868675206375733	build.ninja	87e0e3135b751597
+1	170	6868678955737895	build.ninja	87e0e3135b751597
 9	154	6868550896605430	CMakeFiles/untitled17.dir/ServerLibraryComponent.cpp.obj	3739ecb0fea90487
-8	609	6868660527210440	CMakeFiles/untitled17.dir/ServerBaseBookComponent.cpp.obj	4075390f30729bb1
-521	703	6868660748634052	untitled17.exe	f770119929e9368b
-4	521	6868660746859152	CMakeFiles/untitled17.dir/main.cpp.obj	1f4bbb9597e364d6
-13	661	6868660527729060	CMakeFiles/untitled17.dir/ServerMagazineComponent.cpp.obj	f036e530d410817b
-10	599	6868660527090736	CMakeFiles/untitled17.dir/ServerBookComponent.cpp.obj	5e7b173bd833d622
-25	653	6868567163015472	CMakeFiles/untitled17.dir/Date.cpp.obj	b3dd1a80cc7a19a3
-1	170	6868675206375733	build.ninja	87e0e3135b751597
+14	693	6868675213540117	CMakeFiles/untitled17.dir/ServerBaseBookComponent.cpp.obj	4075390f30729bb1
+560	810	6868675335931139	untitled17.exe	c12abfbcf8580c53
+5	559	6868675333477840	CMakeFiles/untitled17.dir/main.cpp.obj	1f4bbb9597e364d6
+16	688	6868675213480259	CMakeFiles/untitled17.dir/ServerMagazineComponent.cpp.obj	f036e530d410817b
 12	604	6868675212632528	CMakeFiles/untitled17.dir/ServerBookComponent.cpp.obj	5e7b173bd833d622
 19	625	6868675212841972	CMakeFiles/untitled17.dir/Date.cpp.obj	b3dd1a80cc7a19a3
 4	662	6868675213210980	CMakeFiles/untitled17.dir/ServerBaseUserComponent.cpp.obj	215b4f1aa3a8daf5
-21	684	6868675213440364	CMakeFiles/untitled17.dir/main.cpp.obj	1f4bbb9597e364d6
-16	688	6868675213480259	CMakeFiles/untitled17.dir/ServerMagazineComponent.cpp.obj	f036e530d410817b
-14	693	6868675213540117	CMakeFiles/untitled17.dir/ServerBaseBookComponent.cpp.obj	4075390f30729bb1
-694	913	6868675215695124	untitled17.exe	c12abfbcf8580c53
-5	559	6868675333477840	CMakeFiles/untitled17.dir/main.cpp.obj	1f4bbb9597e364d6
-560	810	6868675335931139	untitled17.exe	c12abfbcf8580c53
