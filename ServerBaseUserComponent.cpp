@@ -29,7 +29,7 @@ const std::string &ServerBaseUserComponent::GetUsername() {
     return username;
 }
 
-const std::string &ServerBaseUserComponent::GetPassword() {
+const std::string &ServerBaseUserComponent::GetPassword() const {
     return password;
 }
 

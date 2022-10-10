@@ -17,7 +17,7 @@ public:
     void ChangePassword(const std::string&& other);
     void ChangeLastLogin(const Date&& other);
     const std::string& GetUsername();
-    const std::string& GetPassword();
+    const std::string& GetPassword()const;
     const Date& GetLastLogin();
     const Date& GetDateOfRegistration();
     std::vector<ServerBaseBookComponent*>& GetCollection();
