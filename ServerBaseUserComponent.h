@@ -21,6 +21,7 @@ public:
     const Date& GetLastLogin();
     const Date& GetDateOfRegistration();
     std::vector<ServerBaseBookComponent*>& GetCollection();
+   virtual const bool IsAdmin();
 private:
     const std::string username;
     std::string password;

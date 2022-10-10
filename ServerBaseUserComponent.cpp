@@ -40,3 +40,7 @@ const Date &ServerBaseUserComponent::GetLastLogin() {
 const Date &ServerBaseUserComponent::GetDateOfRegistration() {
     return dateOfRegistration;
 }
+
+const bool ServerBaseUserComponent::IsAdmin() {
+    return false;
+}

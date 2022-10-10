@@ -13,6 +13,7 @@ public:
                              const std::string&& email, const std::string&& department);
     const std::string& GetEmail() const;
     const std::string& GetDepartment() const;
+    const bool IsAdmin() override;
 private:
     const std::string email;
     const std::string department;

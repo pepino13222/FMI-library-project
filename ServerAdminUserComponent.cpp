@@ -11,7 +11,8 @@ ServerAdminUserComponent::ServerAdminUserComponent(const std::string &&username,
                                                    const Date &&dateOfRegistration, const std::string &&email,
                                                    const std::string &&department) : ServerBaseUserComponent(std::move(username),std::move(password),std::move(dateOfRegistration)),
                                                    email(email), department(department)
-{}
+{
+}
 
 const std::string &ServerAdminUserComponent::GetEmail() const {
     return email;
@@ -19,4 +20,8 @@ const std::string &ServerAdminUserComponent::GetEmail() const {
 
 const std::string &ServerAdminUserComponent::GetDepartment() const {
     return department;
+}
+
+const bool ServerAdminUserComponent::IsAdmin() {
+    return true;
 }
