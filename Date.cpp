@@ -40,7 +40,17 @@ Date::Date(const Date &&other)  {
     copy(std::move(other));
 }
 
- Date &Date::operator=(const Date&& other) {
+ Date &Date::operator=(const Date& other) noexcept {
     copy(std::move(other));
     return *this;
 }
+
+ bool Date::operator ==(const Date& other) const
+ {
+     if (this->month == other.month && this->year == other.year)
+     {
+         return true;
+     }
+
+     return false;
+ }

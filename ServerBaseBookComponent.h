@@ -26,6 +26,9 @@ public:
     const int& GetId() const;
     const int& GetNomer() const;
     const Date& GetDate() const;
+    ServerBaseBookComponent& operator =(const ServerBaseBookComponent& other);
+    bool operator ==(const ServerBaseBookComponent& other);
+    bool operator !=(const ServerBaseBookComponent& other);
  ~ServerBaseBookComponent();
 private:
     const std::string name;
@@ -36,5 +39,7 @@ private:
     const int rating;
     const int id;
     const int ISBN;
+    bool isTaken;
+    void copy(const ServerBaseBookComponent& other);
 };
 
