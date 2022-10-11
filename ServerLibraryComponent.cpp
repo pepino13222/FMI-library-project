@@ -4,6 +4,10 @@
 
 #include "ServerLibraryComponent.h"
 
+
+
+ServerLibraryComponent ServerLibraryComponent::library;
+
 const int ServerLibraryComponent::GetIndexOfBook(const book& toSearch)
 {
     auto size = books.size();
@@ -32,7 +36,7 @@ const int ServerLibraryComponent::GetIndexOfUser(const user& toSearch)
 
 void ServerLibraryComponent::AddUser(const user toAdd)
 {
-    if (GetIndexOfUser(toAdd) != -1)
+    if (GetIndexOfUser(toAdd) == -1)
     {
         users.push_back(toAdd);
     }
@@ -40,7 +44,7 @@ void ServerLibraryComponent::AddUser(const user toAdd)
 
 void ServerLibraryComponent::AddBook(const book toAdd)
 {
-    if (GetIndexOfBook(toAdd) != -1)
+    if (GetIndexOfBook(toAdd) == -1)
     {
         books.push_back(toAdd);
     }
@@ -78,4 +82,72 @@ bool ServerLibraryComponent::RemoveBook(const book&& toRemove)
     }
     books = newVector;
     return status;
+}
+
+user ServerLibraryComponent::GetUser(const std::string username) 
+{
+    auto size = users.size();
+    for (size_t i = 0; i < size; i++)
+    {
+        if(users[i]->GetUsername() == username)
+        {
+            return users[i];
+        }
+    }
+    return nullptr;
+}
+
+void ServerLibraryComponent::Login(const std::string& username, const std::string& password)
+{
+
+    if (currentlyLoggedIn)
+    {
+        printf("Already logged in!\n");
+    }
+
+    auto user = GetUser(username);
+   
+    if(user && user->GetPassword() == password)
+    {
+        user->ChangeLastLogin(std::move(currentDate));
+        currentlyLoggedIn = user;
+        printf("Welcome %s!\n", username.c_str());
+    }
+    else
+    {
+        printf("Wrong username or password!\n");
+    }
+    
+}
+
+void ServerLibraryComponent::Logout()
+{
+    if (currentlyLoggedIn)
+    {
+        currentlyLoggedIn = nullptr;
+        printf("Logged out!\n");
+    }
+    else
+    {
+        printf("No logged in user!\n");
+    }
+}
+
+void ServerLibraryComponent::ChangeCurrentDate(const Date& date)
+{
+   this->currentDate = date;
+}
+
+user& ServerLibraryComponent::GetCurrentlyLoggedIn()
+{
+    return currentlyLoggedIn;
+}
+
+ServerLibraryComponent* ServerLibraryComponent::GetLibrary()
+{
+    return &library;
+}
+
+ServerLibraryComponent::ServerLibraryComponent()
+{
 }

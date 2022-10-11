@@ -25,7 +25,7 @@ public:
 
    bool operator ==(const ServerBaseUserComponent& other) const;
    bool operator !=(const ServerBaseUserComponent& other) const;
-private:
+protected:
     const std::string username;
     std::string password;
     std::vector<ServerBaseBookComponent*> collection;

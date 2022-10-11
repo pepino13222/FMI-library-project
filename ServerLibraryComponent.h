@@ -19,10 +19,23 @@ public:
 	void AddBook(const book toAdd);
 	bool RemoveUser(const user&& toRemove);
 	bool RemoveBook(const book&& toRemove);
+	user GetUser(const std::string username);
+	void Login(const std::string& username, const std::string& password);
+	void Logout();
+	void ChangeCurrentDate(const Date& date);
+	user& GetCurrentlyLoggedIn();
+	static ServerLibraryComponent* GetLibrary();
 
-private:
+	ServerLibraryComponent(ServerLibraryComponent& other) = delete;
+	void operator =(const ServerLibraryComponent& other) = delete;
+
+protected:
+	ServerLibraryComponent();
+	static ServerLibraryComponent library;
 	std::vector <user> users;
 	std::vector <book> books;
+	user currentlyLoggedIn = nullptr;
+	Date currentDate;
 };
 
 
