@@ -44,3 +44,18 @@ const Date &ServerBaseUserComponent::GetDateOfRegistration() {
 const bool ServerBaseUserComponent::IsAdmin() {
     return false;
 }
+
+bool ServerBaseUserComponent::operator==(const ServerBaseUserComponent& other) const
+{
+    if (this->collection == other.collection && this->dateOfRegistration == other.dateOfRegistration && this->lastLogin == other.lastLogin &&
+        this->password == other.password && this->username == other.username)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool ServerBaseUserComponent::operator!=(const ServerBaseUserComponent& other) const
+{
+    return !(*this == other);
+}

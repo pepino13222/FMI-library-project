@@ -22,6 +22,9 @@ public:
     const Date& GetDateOfRegistration();
     std::vector<ServerBaseBookComponent*>& GetCollection();
    virtual const bool IsAdmin();
+
+   bool operator ==(const ServerBaseUserComponent& other) const;
+   bool operator !=(const ServerBaseUserComponent& other) const;
 private:
     const std::string username;
     std::string password;
