@@ -40,6 +40,11 @@ const int &ServerBaseBookComponent::GetNomer() const {
     return ISBN;
 }
 
+const Date& ServerBaseBookComponent::GetDate() const
+{
+    return date;
+}
+
 ServerBaseBookComponent::~ServerBaseBookComponent() = default;
 
 

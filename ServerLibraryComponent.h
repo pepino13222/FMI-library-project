@@ -1,7 +1,7 @@
 //
 // Created by Pesho on 10/7/2022.
 //
-#pragma once;
+#pragma once
 
 class ServerLibraryComponent {
 
