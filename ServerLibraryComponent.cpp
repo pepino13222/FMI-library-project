@@ -162,3 +162,14 @@ const void ServerLibraryComponent::BookAll() const
         }
     }
 }
+
+const void ServerLibraryComponent::SeriesAll()
+{
+    for (auto& item : books)
+    {
+        if(item->GetType() == TypeOfBook::MAGAZINE)
+        {
+            item->PrintInfo();
+        }
+    }
+}

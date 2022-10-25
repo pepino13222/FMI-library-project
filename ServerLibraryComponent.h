@@ -27,6 +27,8 @@ public:
 	static ServerLibraryComponent* GetLibrary();
 
     const void BookAll() const;
+    const void SeriesAll();
+
 
 	ServerLibraryComponent(ServerLibraryComponent& other) = delete;
 	void operator =(const ServerLibraryComponent& other) = delete;

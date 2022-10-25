@@ -45,6 +45,10 @@ int main()
         {
             library->BookAll();
         }
+        else if(command == "series all")
+        {
+            library->SeriesAll();
+        }
     }
     delete library;
     return 0;
