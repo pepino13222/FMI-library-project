@@ -28,6 +28,7 @@ public:
 
     const void BookAll() const;
     const void SeriesAll();
+    const void ListAll();
 
 
 	ServerLibraryComponent(ServerLibraryComponent& other) = delete;

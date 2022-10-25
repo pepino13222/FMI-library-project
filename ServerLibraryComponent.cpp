@@ -173,3 +173,11 @@ const void ServerLibraryComponent::SeriesAll()
         }
     }
 }
+
+const void ServerLibraryComponent::ListAll()
+{
+    for (auto& item : books)
+    {
+            item->PrintInfo();
+    }
+}
