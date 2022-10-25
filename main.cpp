@@ -41,6 +41,10 @@ int main()
         {
             library->Logout();
         }
+        else if(command == "book all")
+        {
+            library->BookAll();
+        }
     }
     delete library;
     return 0;

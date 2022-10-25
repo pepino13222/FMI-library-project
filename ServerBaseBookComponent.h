@@ -6,6 +6,13 @@
 #include <string>
 #include "Date.h"
 
+enum TypeOfBook{
+    ERROR = 0,
+    BOOK,
+    MAGAZINE,
+    NUMBER_OF_TYPES
+};
+
 class ServerBaseBookComponent {
 
 public:
@@ -26,6 +33,10 @@ public:
     const int& GetId() const;
     const int& GetNomer() const;
     const Date& GetDate() const;
+
+    virtual const TypeOfBook GetType()const;
+    const void PrintInfo();
+
     ServerBaseBookComponent& operator =(const ServerBaseBookComponent& other);
     bool operator ==(const ServerBaseBookComponent& other);
     bool operator !=(const ServerBaseBookComponent& other);

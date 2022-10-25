@@ -22,3 +22,7 @@ const int &ServerMagazineComponent::GetQuantity() const {
 std::vector<Edition> &ServerMagazineComponent::GetEditions() {
     return editions;
 }
+
+const TypeOfBook ServerMagazineComponent::GetType() const {
+    return TypeOfBook::MAGAZINE;
+}

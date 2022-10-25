@@ -20,6 +20,7 @@ public:
                              const Date&& date,const int&& quantity);
     const int& GetQuantity() const;
     std::vector<Edition>& GetEditions();
+    const TypeOfBook GetType() const override;
 private:
 const int quantity;
 std::vector<Edition> editions;

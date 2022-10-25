@@ -151,3 +151,14 @@ ServerLibraryComponent* ServerLibraryComponent::GetLibrary()
 ServerLibraryComponent::ServerLibraryComponent()
 {
 }
+
+const void ServerLibraryComponent::BookAll() const
+{
+    for (auto& item : books)
+    {
+        if(item->GetType() == TypeOfBook::BOOK)
+        {
+                item->PrintInfo();
+        }
+    }
+}

@@ -82,5 +82,15 @@ void ServerBaseBookComponent::copy(const ServerBaseBookComponent & other)
 
 }
 
+const void ServerBaseBookComponent::PrintInfo()
+{
+    printf("Title: %s\nGenre: %s\nISBN/ISSN: %n\n", name.c_str(),genre.c_str(),ISBN);
+}
+
+const TypeOfBook ServerBaseBookComponent::GetType() const
+{
+    return TypeOfBook::ERROR;
+}
+
 
 

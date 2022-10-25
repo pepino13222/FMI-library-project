@@ -26,6 +26,8 @@ public:
 	user& GetCurrentlyLoggedIn();
 	static ServerLibraryComponent* GetLibrary();
 
+    const void BookAll() const;
+
 	ServerLibraryComponent(ServerLibraryComponent& other) = delete;
 	void operator =(const ServerLibraryComponent& other) = delete;
 

@@ -20,6 +20,7 @@ public:
                         {}
 
     const std::string& GetAuthor();
+    const TypeOfBook GetType() const override;
 private:
     const std::string author;
 };

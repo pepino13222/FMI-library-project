@@ -7,3 +7,7 @@
 const std::string &ServerBookComponent::GetAuthor() {
     return author;
 }
+
+const TypeOfBook ServerBookComponent::GetType() const  {
+    return TypeOfBook::BOOK;
+}
